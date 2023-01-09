@@ -5,9 +5,9 @@ export default function Menu(){
     return(
         <nav className={style.Menu}>
             <div>
-                <Link href='/'> <a className={style.link}> HOME </a></Link>
-                <Link href='/store'> <a className={style.link}> STORE </a></Link>
-                <Link href='/faq'> <a className={style.link}> FAQ </a></Link>
+                <Link href='/' className={style.link}> HOME </Link>
+                <Link href='/store' className={style.link}> STORE </Link>
+                <Link href='/faq' className={style.link}> FAQ </Link>
                
             </div>
 
