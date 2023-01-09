@@ -1,19 +1,40 @@
 import Link from "next/link"
 import Image from "next/image"
 import style from '../styles/product.module.css'
+import { convertToPath } from "../lib/utils"
 
 
 export default function Product({item, showAs}){
     if(showAs == 'Page'){
         return (
-            <div>
-                <Image
-                    src = {item.image}
-                    height={500}
-                    width={500}
-                    alt={item.title}
-                />
-                <a className={style.hola}>BUENAS {item.description} </a>
+            <div className={style.page}> 
+                <div className={style.image}>
+                    <Image src={item.image} 
+                        alt={item.description} 
+                        width={700} 
+                        height={700}
+                    />
+                </div>
+
+                <div className={style.info}>
+                    <div>
+                        <h2>
+                            {item.title}
+                        </h2>
+                    </div>
+
+                    <div className={style.price}>
+                        ${item.price}
+                    </div>
+
+                    <div>
+                        {item.description}
+                    </div>
+
+                    <div>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
             </div>
             )
 
@@ -27,7 +48,7 @@ export default function Product({item, showAs}){
     return(
         <div className={style.item}>
             <div>
-                <Link href={`/store/${item.id}`}>
+                <Link href={`/store/${convertToPath(item.title)}`}>
                         <Image src={item.image} 
                         alt={item.description} 
                         width={300} 

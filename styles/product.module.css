@@ -24,8 +24,37 @@
     margin: 5px 0;
 }
 
-.hola {
-    font-size: 40px;
-    color: red;
-    font-weight: bold;
+@keyframes scale {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.page {
+    background-color: pink;
+    padding: 40px;
+    display: flex;
+    box-shadow: 0 0 50px pink;
+    transform: scale(0);
+    animation: scale 0.3s ease forwards;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px;
+}
+
+.price {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.image{
+    width: 700px;
+    min-width: 700px;
 }
