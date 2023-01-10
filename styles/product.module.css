@@ -68,3 +68,16 @@
     font-size: 18px;
     
 }
+
+.title {
+    height: 25px;
+    width: 70px;
+}
+
+.button {
+    justify-content: right;
+    display: flex;
+    flex-wrap: wrap;
+    right: 0;
+    top: 0;
+}

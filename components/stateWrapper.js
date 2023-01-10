@@ -8,6 +8,7 @@ const AppContext = createContext({
     getNumberOfItems: () => {},
     closeCart: () => {},
     handleCart: () => {},
+    removeItemFromCart: (item) => {},
 
 });
 
@@ -39,6 +40,19 @@ export default function StateWrapper({children}){
         setItems([...temp])
     }
 
+    function handleRemoveItemFromCart(item){
+        const temp = [...items];
+        const found = temp.find(prod => prod.id == item.id)
+        if (found.qty > 1){
+            found.qty--;
+            setItems([...temp]);
+        }else{
+            const temp2 = temp.filter((prod) => prod.id !== item.id)
+            setItems([...temp2]);
+        }
+        
+    }
+
     function handleNumberOfItems(){
         const total = items.reduce((acc,item) => acc + item.qty, 0);
         return total
@@ -54,6 +68,7 @@ export default function StateWrapper({children}){
                 addItemToCart: handleAddItemToCart,
                 getNumberOfItems: handleNumberOfItems,
                 handleCart: handleCart,
+                removeItemFromCart: handleRemoveItemFromCart,
           }}
         >
             {children}

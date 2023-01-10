@@ -3,9 +3,16 @@ import Image from "next/image"
 import style from '../styles/product.module.css'
 import { convertToPath } from "../lib/utils"
 import AddToCart from './addtocart'
+import { useAppContext } from './stateWrapper'
 
 
 export default function Product({item, showAs, qty}){
+
+    const cart = useAppContext();
+    function handleClick(){
+        cart.removeItemFromCart(item);
+    }
+
     if(showAs == 'Page'){
         return (
             <div className={style.page}> 
@@ -51,7 +58,12 @@ export default function Product({item, showAs, qty}){
                     />
                 </div>
                 <div>
-                    <div><h3>{item.title}</h3></div>
+                    <div>
+                        <button className={style.button} onClick={handleClick}>x</button>
+                        <h3>{item.title}</h3>
+                        
+                    </div>
+                    
                     <div>${item.price} each</div>
                     {qty==0 ? '' :  <div>{qty} units</div>}
                     {qty==0 ? '' :  <div>Subtotal: ${qty * item.price}</div>}
