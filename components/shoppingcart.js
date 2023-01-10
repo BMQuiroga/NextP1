@@ -10,7 +10,7 @@ export default function ShoppingCart(){
 
     const cart = useAppContext();
     return(
-        <div className={style.shoppingCart} style={{display: cart.isOpen ? 'block' : 'none'}}>
+        <div className={style.shoppingCart}  style={{display: cart.isOpen ? 'block' : 'none'}}>
 
             {cart.items.length == 0 ? (<div className={style.empty}>Cart is empty</div>) : (
             <>

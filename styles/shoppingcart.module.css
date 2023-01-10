@@ -10,6 +10,8 @@
     box-shadow: 0 0 10px black;
     display: flex;
     flex-direction: column;
+    /*overflow: auto;*/
+    overflow-y: scroll;
 }
 
 .total{

@@ -25,6 +25,28 @@ export default function handler(req, res) {
     image: 'http://localhost:3000/img/kyuubey-plush.jpg',
     description: 'Lopem Ipsum'
     },
+    {
+    id: 3,
+    title: 'Mami',
+    price: 1300,
+    image: 'http://localhost:3000/img/mami-plush.png',
+    description: 'Lopem Ipsum'
+    },
+    {
+    id: 4,
+    title: 'kyoko',
+    price: 200,
+    image: 'http://localhost:3000/img/kyoko-plush.jpg',
+    description: 'Lopem Ipsum'
+    },
+    {
+    id: 5,
+    title: 'Sayaka',
+    price: 50,
+    image: 'http://localhost:3000/img/sayaka-plush.png',
+    description: 'Lopem Ipsum'
+    },
+    
 
   ]);
 

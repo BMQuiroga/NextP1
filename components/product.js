@@ -58,9 +58,10 @@ export default function Product({item, showAs, qty}){
                     />
                 </div>
                 <div>
-                    <div>
-                        <button className={style.button} onClick={handleClick}>x</button>
-                        <h3>{item.title}</h3>
+                    <div className={style.bigdiv}>
+                        <div className={style.title}>{item.title}</div>
+                        <div className={style.button}><button className={style.button} onClick={handleClick}>x</button></div>
+                        
                         
                     </div>
                     
