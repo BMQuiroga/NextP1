@@ -4,9 +4,10 @@ const AppContext = createContext({
     isOpen: true,
     items: [],
     openCart: () => {},
-    addItemToCart: () => {},
+    addItemToCart: (item) => {},
     getNumberOfItems: () => {},
     closeCart: () => {},
+    handleCart: () => {},
 
 });
 
@@ -20,6 +21,10 @@ export default function StateWrapper({children}){
 
     function handleCloseCart(){
         setIsOpen(false);
+    }
+
+    function handleCart(){
+        setIsOpen(!isOpen);
     }
 
     function handleAddItemToCart(item){
@@ -48,6 +53,7 @@ export default function StateWrapper({children}){
                 closeCart: handleCloseCart,
                 addItemToCart: handleAddItemToCart,
                 getNumberOfItems: handleNumberOfItems,
+                handleCart: handleCart,
           }}
         >
             {children}

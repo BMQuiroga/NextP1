@@ -277,3 +277,14 @@
     transform: rotate(0deg);
   }
 }
+
+.banner {
+  background-color: black;
+  background-image: url(../public/img/rebellion.png);
+  background-size:cover;
+  height: 500px;
+  width: 1070px;
+
+
+  box-sizing: border-box;
+}

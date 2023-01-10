@@ -58,3 +58,13 @@
     width: 700px;
     min-width: 700px;
 }
+
+.list{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid pink;
+    font-size: 18px;
+    
+}

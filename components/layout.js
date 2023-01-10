@@ -1,6 +1,7 @@
 import Head from "next/head"
 import style from '../styles/Layout.module.css'
 import Menu from './menu.js'
+import ShoppingCart from './shoppingcart'
 
 export default function Layout({children, title}){
     return(
@@ -19,7 +20,9 @@ export default function Layout({children, title}){
             <div className={style.container}>
                 {children}
             </div>
-            
+            <ShoppingCart>
+                
+            </ShoppingCart>
 
 
         </div>
