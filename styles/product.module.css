@@ -77,16 +77,22 @@
 }
 
 .button {
-    justify-content: right;
+    justify-content: center;
     right: 0;
     top: 0;
     height: 25px;
     width: 25px;
+    align-items: center;
+    font-size: 10px;
+    border-radius: 50%;
+    border: 1px solid pink;
 
 }
 
 .bigdiv{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     margin: 2px;
 }
