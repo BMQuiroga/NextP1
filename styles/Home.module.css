@@ -280,9 +280,9 @@
 
 .banner {
   background-color: black;
-  background-image: url(../public/img/rebellion.png);
+  background-image: url(../public/img/banner.jpg);
   background-size:cover;
-  height: 500px;
+  height: 200px;
   width: 1070px;
 
 
